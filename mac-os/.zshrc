@@ -3,7 +3,10 @@ export JAVA_HOME=$(/usr/libexec/java_home -v14)
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 export JAVA_14_HOME=$(/usr/libexec/java_home -v14)
+
+# path config for homebrew
 export PATH="/usr/local/opt/maven@3.5/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 ### alias
 alias cddev='cd ~/dev'
@@ -18,4 +21,3 @@ alias setupWebProject='~/dev/scripts/webdevelop-starter/setupWebProject.sh'
 autoload -U promptinit; promptinit
 # prompt spaceship
 prompt pure
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
