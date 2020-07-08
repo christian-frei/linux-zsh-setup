@@ -41,12 +41,27 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # aliases
 alias cdjunk="cd ~/dev/junk"
 alias cddev="cd ~/dev"
+alias junkremoval="rm -rf ~/dev/junk/*"
+alias setupJakartaeeProject="~/dev/scripts/jakartaee-starter/setupJakartaeeProject.sh"
+alias setupWebProject="~/dev/scripts/webdevelop-starter/setupWebProject.sh"
+
+# java
+export JAVA_14_HOME="/usr/java/jdk-14"
+export JAVA_11_HOME="/usr/java/jdk-11.0.2"
+export JAVA_HOME="$JAVA_14_HOME"
+alias j14='export JAVA_HOME="$JAVA_14_HOME" && echo JAVA_HOME="$JAVA_HOME" && export PATH="$JAVA_HOME"/bin:"$PATH"'
+alias j11='export JAVA_HOME="$JAVA_11_HOME" && echo JAVA_HOME="$JAVA_HOME" && export PATH="$JAVA_HOME"/bin:"$PATH"'
+
+# browser-sync
+alias bsync='browser-sync start -s src -f src -b "google-chrome" --no-notify'
 
 # system variables
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export M2_HOME="/usr/share/maven"
 export M2="$M2_HOME/bin"
 export MAVEN_OPTS="-Xms256m -Xmx512m"
+
+# PATH
+export PATH=$JAVA_HOME/bin:$PATH
 
 # starship
 eval "$(starship init zsh)"
